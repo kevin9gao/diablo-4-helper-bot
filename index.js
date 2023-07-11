@@ -37,4 +37,8 @@ for (const file of eventFiles) {
 	}
 }
 
-client.login(process.env.TOKEN);
+async function bootD4HelperBot() {
+	await client.login(process.env.TOKEN);
+}
+
+bootD4HelperBot().catch((err) => console.error(err));
