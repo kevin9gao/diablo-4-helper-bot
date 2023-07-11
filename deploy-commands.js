@@ -1,5 +1,5 @@
 const { REST, Routes } = require('discord.js');
-const { clientId, guildId } = require('./config.json');
+// const { clientId, guildId } = require('./config.json');
 require('dotenv').config();
 const fs = require('node:fs');
 const path = require('node:path');
@@ -25,6 +25,8 @@ for (const folder of commandFolders) {
 }
 
 const rest = new REST().setToken(process.env.TOKEN);
+const clientId = process.env.CLIENTID;
+const guildId = process.env.GUILDID;
 
 (async () => {
   try {
