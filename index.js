@@ -41,4 +41,10 @@ async function bootD4HelperBot() {
 	await client.login(process.env.TOKEN);
 }
 
-bootD4HelperBot().catch((err) => console.error(err));
+// bootD4HelperBot().catch((err) => console.error(err));
+try {
+	bootD4HelperBot()
+} catch (e) {
+	console.error(e);
+	bootD4HelperBot()
+}
